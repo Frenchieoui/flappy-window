@@ -1,6 +1,6 @@
 importScripts("engine.js")
 
-const engine = new Engine()
+const engine = new Engine(60)
 
 engine.onReady = () => {
     const bird = new GameObject(engine, "objects/bird/index.html")
