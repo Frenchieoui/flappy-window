@@ -3,7 +3,7 @@ importScripts("engine.js")
 const engine = new Engine()
 
 engine.onReady = () => {
-    const bird = new GameObject(engine, "/objects/bird/index.html")
+    const bird = new GameObject(engine, "objects/bird/index.html")
     bird.x = 1000
     bird.y = 300
     bird.yVel = 0
