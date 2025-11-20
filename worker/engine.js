@@ -22,7 +22,7 @@ class Engine {
 
         this.lastUpdate = Date.now()
 
-        this.updateInterval = setInterval(this.update.bind(this), 1 / this.frameRate)
+        this.updateInterval = setInterval(this.update.bind(this), 1000 / this.frameRate)
     }
 
     update() {
