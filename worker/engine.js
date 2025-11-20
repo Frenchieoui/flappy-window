@@ -22,17 +22,23 @@ class Engine {
 
         this.lastUpdate = Date.now()
 
-        this.updateInterval = setInterval(this.update.bind(this), 1 / this.frameRate)
+        this.updateInterval = setInterval(this._update.bind(this), 1000 / this.frameRate)
     }
 
-    update() {
+    _update() {
         const now = Date.now()
         const dt = now - this.lastUpdate
         this.lastUpdate = now
 
+        this.update(dt)
+
         for (const id in this.gameObjects) {
             this.gameObjects[id].update(dt)
         }
+    }
+
+    update(dt) {
+
     }
 
     onConnect(e) {
